@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Exo|Jura|Raleway);
+
+.logo {
+  width: 400px;
+  height: 120px;
+  position: absolute;
+
+  top: 50%;
+  margin-top: -60px;
+  left: 50%;
+  margin-left: -200px;
+
+  text-align: center;
+  line-height: 120px;
+
+  font-family: "Jura", sans-serif;
+  font-weight: bold;
+  font-size: 29px;
+  color: #ff8000;
+}
+
+.downloader {
+  text-align: center;
+  color: #ff8000;
+  font-family: "Jura", sans-serif;
+  font-weight: bold;
+  /* font-size: 19px; */
+}
+
+body {
+  background: #232323; /* fallback for old browsers */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8000;
+  overflow: hidden;
+}
