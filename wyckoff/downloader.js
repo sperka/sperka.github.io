@@ -27,7 +27,8 @@ $(document).ready(() => {
           tickers.push(ticker);
         });
 
-        pushFile(tickers.join(","));
+        pushFile(tickers.join(","), "wyckoff-communal-list-tickers.txt");
+        pushFile(tickers.join("*"), "wyckoff-communal-list-tickers-index.txt");
       },
 
       error: (err) => {
@@ -37,14 +38,14 @@ $(document).ready(() => {
   });
 });
 
-const pushFile = (data) => {
+const pushFile = (data, filename) => {
   //creating an invisible element
   const element = document.createElement("a");
   element.setAttribute(
     "href",
     "data:text/plain;charset=utf-8, " + encodeURIComponent(data)
   );
-  element.setAttribute("download", "wyckoff-communal-list-tickers.txt");
+  element.setAttribute("download", filename);
   document.body.appendChild(element);
   element.click();
   document.body.removeChild(element);
